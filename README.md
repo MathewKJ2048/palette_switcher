@@ -27,3 +27,7 @@ This breaks an image down into k common colors.
 `python <path_to_main.py> impose <path_to_palette> <path_to_input> <path_to_output> k [interpolation]`
 
 This extracts the palette used in the palette image and applies it to the input image.
+
+## Acknowledgements:
+
+[Ivan Radik](https://www.flickr.com/photos/26344495@N05/) for the photo [Fluffy ginger cat looking away from camera](https://www.flickr.com/photos/26344495@N05/)
