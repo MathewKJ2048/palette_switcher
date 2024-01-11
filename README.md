@@ -8,105 +8,22 @@ A python script to identify and change the color palette of arbitrary images
 - PIL
 - scikit-learn
 
+## Working:
+
+- The algorithm uses k-means clustering in RGB space to identify common colors in an image.
+- Each common color is mapped to a color in the target palette.
+- Each pixel is replaced by the target color mapped to the common color closest to it in RGB space, where
+- Closeness is measured using Manhattan distance.
+- Interpolation is done on the color's projection in the plane containing the two closest common colors, followed by taking the weighted average
+
 ## Use:
 
 Run `main.py` with one of the following arguments:
 
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
+`python <path_to_main.py> isolate <path_to_input> <path_to_output> k`
 
-    #slideshow-container {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
+This breaks an image down into k common colors.
 
-    .slide {
-      flex: 1;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+`python <path_to_main.py> impose <path_to_palette> <path_to_input> <path_to_output> k [interpolation]`
 
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    #prev, #next {
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      font-size: 24px;
-      cursor: pointer;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-    }
-
-    #prev {
-      left: 0;
-    }
-
-    #next {
-      right: 0;
-    }
-  </style>
-</head>
-<body>
-
-<div id="slideshow-container">
-  <div class="slide">
-    <img src="image1.jpg" alt="Image 1">
-  </div>
-  <div class="slide">
-    <img src="image2.jpg" alt="Image 2">
-  </div>
-  <div class="slide">
-    <img src="image3.jpg" alt="Image 3">
-  </div>
-  <!-- Add more slides as needed -->
-
-  <button id="prev" onclick="plusSlides(-1)">❮</button>
-  <button id="next" onclick="plusSlides(1)">❯</button>
-</div>
-
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    let i;
-    const slides = document.getElementsByClassName("slide");
-
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "flex";
-  }
-</script>
-
+This extracts the palette used in the palette image and applies it to the input image.
