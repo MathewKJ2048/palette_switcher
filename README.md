@@ -3,7 +3,11 @@ A python script to identify and change the color palette of arbitrary images
 
 ## Examples
 
-![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat.png) *original*
+![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat.png)
+![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat_2.png)
+![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat_4.png)
+![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat_8.png)
+![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat_16.png)
 
 ## Pre-requisites:
 
