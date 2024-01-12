@@ -30,4 +30,5 @@ This extracts the palette used in the palette image and applies it to the input 
 
 ## Acknowledgements:
 
-[Ivan Radik](https://www.flickr.com/photos/26344495@N05/) for the photo [Fluffy ginger cat looking away from camera](https://www.flickr.com/photos/26344495@N05/)
+- [Ivan Radik](https://www.flickr.com/photos/26344495@N05/) for the photo [Fluffy ginger cat looking away from camera](https://www.flickr.com/photos/26344495@N05/)
+- [https://coolors.co/](https://coolors.co/) for the palettes used
