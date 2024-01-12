@@ -33,7 +33,7 @@ This extracts the palette used in the palette image and applies it to the input 
 ## Examples
 ### Original image
 
-![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat.png)
+![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/original.png)
 
 ### Isolate
 ![](https://github.com/MathewKJ2048/palette_switcher/blob/main/test/cat_2.png)
